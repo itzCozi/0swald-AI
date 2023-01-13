@@ -1,5 +1,5 @@
-          #THE PEOPLES OPEN-SOURCE & FREEWARE LICENSE
-                    Version 1, January 2023
+            THE PEOPLES OPEN-SOURCE & FREEWARE LICENSE
+                     Version 1, January 2023
                     
  ORIGINAL CREATOR: [itzCozi](https://github.com/itzCozi) | Cooperransom08@outlook.com
 
@@ -7,7 +7,7 @@
  in this repository or webpage as long as the following requirements are meant.
 
 
-            THE PEOPLES OPEN-SOURCE & FREEWARE LICENSE
+             THE PEOPLES OPEN-SOURCE & FREEWARE LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
 
  1) The editing party give's credit to the team behind the original source-code.
