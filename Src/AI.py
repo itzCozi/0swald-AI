@@ -16,7 +16,7 @@ from colorama import Fore, Style
 
 debug = True
 window = tk.Tk()
-openai.api_key = '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'
+openai.api_key = 'YOUR_API_KEY'
 
 # Path to tesseract on pc
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
