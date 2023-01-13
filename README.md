@@ -24,5 +24,5 @@ To run the program simply do the following...
 3. you should see the GUI where you can press 'p' to screenshot
 
 # Credit
-Made-by: [itzCozi](https://github.com/itzCozi) | Cooper ransom
+Made-by: [itzCozi](https://github.com/itzCozi) | Cooper ransom                                                                                             
 Sources: notes.txt (All sources are in notes)
