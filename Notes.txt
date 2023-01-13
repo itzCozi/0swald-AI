@@ -1,0 +1,8 @@
+NOTES AND SOURCES
+
+1.Print answer into 'x=' field
+https://stackoverflow.com/questions/13166395/fill-input-of-type-text-and-press-submit-using-python
+
+2. Tkinter GUI docs
+https://www.pythontutorial.net/tkinter/tkinter-pack/
+
