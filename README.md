@@ -2,7 +2,7 @@
 
 IXL is terrible so I made this POC to show my unique problem solving with coding AI's 
 
-# Requirments
+## Requirments
 - Pytesseract
 - tkinter
 - openAI (API-KEY and package)
@@ -10,7 +10,7 @@ IXL is terrible so I made this POC to show my unique problem solving with coding
 - PIL
 - colorama
 
-# Usage
+## Usage
 If you would like to test/run the code you will first need to...
 
 1. Change pytessteract path in AI.py
@@ -23,6 +23,9 @@ To run the program simply do the following...
 2. type 'python AI.py' in your terminal
 3. you should see the GUI where you can press 'p' to screenshot
 
-# Credit
+### Credit
 Made-by: [itzCozi](https://github.com/itzCozi) | Cooper ransom                                                                                             
 Sources: notes.txt (All sources are in notes)
+Discord: Baddeveloper#4200   
+Email: Cooperransom08@outlook.com                                                                                                                             
+[Replit](https://replit.com/@cozi08) | [Twitter](https://twitter.com/ransom_cooper)
