@@ -25,7 +25,7 @@ To run the program simply do the following...
 
 ### Credit
 Made-by: [itzCozi](https://github.com/itzCozi) | Cooper ransom                                                                                             
-Sources: notes.txt (All sources are in notes)
+Sources: notes.txt (All sources are in notes)  
 Discord: Baddeveloper#4200   
 Email: Cooperransom08@outlook.com                                                                                                                             
 [Replit](https://replit.com/@cozi08) | [Twitter](https://twitter.com/ransom_cooper)
