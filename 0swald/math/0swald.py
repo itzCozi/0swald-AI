@@ -34,7 +34,7 @@ class functions:
       max_tokens=130
     )
     if debug:
-      print('Request made!')
+      print('Request made')
     return response
 
   def install(URL, destination, name=""):
@@ -47,7 +47,7 @@ class functions:
     for widget in window.winfo_children():
       widget.destroy()
     if debug:
-      print('Window reset!')
+      print('Window reset')
 
   # Image to string
   def imgToString():
@@ -63,13 +63,13 @@ def printResponse():
   window.geometry('680x400')
   window.title('Homework AI')
   if debug:
-    print('Started!')
-    print('Display initiated!')
+    print('Started')
 
     problemWidget = tk.Text(window,height=5,width=52,bg='Black',fg='Green')
     clearall = tk.Button(window,text='reset',command=functions.resetAll,bg='Black',fg='Green')
     Txt = tk.Text(window, height=5, width=52, fg='Green', bg='Black')
     Heading = tk.Label(window,text='------ Delta Math Artificial Intelligence ------',bg='Black',fg='Green')
+    print('Display initiated')
 
     # Config text widgets
     Heading.config(font=('Consolas', 16))
