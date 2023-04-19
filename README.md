@@ -1,5 +1,5 @@
 # English-IXL-AI
-IXL is terrible so I made this POC to show my unique problem solving with coding AI's 
+IXL and delta-math are terrible learning tools so I made this POC to show my unique problem solving with coding AI apps. I heavily encorage using this to cheat your IXL's or delta-math they are bad tools instead spend time coding or any other thing that makes you happy.
 
 ## Requirments
 - Pytesseract
@@ -7,7 +7,7 @@ IXL is terrible so I made this POC to show my unique problem solving with coding
 - openAI (API-KEY and package)
 - pyscreenshot
 - PIL
-- colorama(NEEDS TO BE REOMVED)
+- requests
 
 ## Usage
 If you would like to test/run the code you will first need to...
