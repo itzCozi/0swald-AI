@@ -1,5 +1,4 @@
-import os
-import time
+import os, sys
 import openai
 import requests
 import pytesseract
@@ -49,73 +48,74 @@ class functions:
     if debug:
       print('Window reset')
 
-  # Image to string
+  def screenShot(event):
+    # Find general x,y location for the problem
+    x1 = 340
+    y1 = 350
+    x2 = 1260
+    y2 = 750
+
+    im = ImageGrab.grab(bbox=(int(x1), int(y1), int(x2), int(y2)))
+    im.save('newProblem.png')
+    functions.imgToString()
+    functions.resetAll()
+    printResponse()
+    if debug:
+      print('Screenshot taken')
+
   def imgToString():
-    time.sleep(1)
+    # Image to string
     currentProblem = pytesseract.image_to_string(Image.open('newProblem.png'))
     if debug:
       print('Problem translated to string')
     return currentProblem
 
 
-  # Print the response to tinker window (Find a way to input response into the website)
 def printResponse():
+  # Print the response to tinker window (Find a way to input response into the website)
   window.geometry('680x400')
   window.title('Homework AI')
   if debug:
     print('Started')
 
-    problemWidget = tk.Text(window,height=5,width=52,bg='Black',fg='Green')
-    clearall = tk.Button(window,text='reset',command=functions.resetAll,bg='Black',fg='Green')
-    Txt = tk.Text(window, height=5, width=52, fg='Green', bg='Black')
-    Heading = tk.Label(window,text='------ Delta Math Artificial Intelligence ------',bg='Black',fg='Green')
+  problemWidget = tk.Text(window,height=5,width=52,bg='Black',fg='Green')
+  clearall = tk.Button(window,text='reset',command=functions.resetAll,bg='Black',fg='Green')
+  Txt = tk.Text(window, height=5, width=52, fg='Green', bg='Black')
+  Heading = tk.Label(window,text='------ Delta Math Artificial Intelligence ------',bg='Black',fg='Green')
+  if debug:
     print('Display initiated')
 
-    # Config text widgets
-    Heading.config(font=('Consolas', 16))
-    problemWidget.config(font=('Consolas', 12))
-    Txt.config(font=('Consolas', 12))
-    clearall.config(font=('Consolas', 16))
+  # Config text widgets
+  Heading.config(font=('Consolas', 16))
+  problemWidget.config(font=('Consolas', 12))
+  Txt.config(font=('Consolas', 12))
+  clearall.config(font=('Consolas', 16))
 
-    # Config packs
-    Heading.pack(ipadx=20,ipady=20,anchor=tk.N,fill=tk.X)
-    problemWidget.pack(ipadx=110,ipady=20,anchor=tk.CENTER,expand=True,fill=tk.BOTH)
-    Txt.pack(ipadx=125,ipady=20,anchor=tk.CENTER,expand=True,fill=tk.BOTH)
-    clearall.pack(anchor=tk.CENTER,fill=tk.X)
+   # Config packs
+  Heading.pack(ipadx=20,ipady=20,anchor=tk.N,fill=tk.X)
+  problemWidget.pack(ipadx=110,ipady=20,anchor=tk.CENTER,expand=True,fill=tk.BOTH)
+  Txt.pack(ipadx=125,ipady=20,anchor=tk.CENTER,expand=True,fill=tk.BOTH)
+  clearall.pack(anchor=tk.CENTER,fill=tk.X)
 
-    # Insert text to widgets
-    problemWidget.config(state='normal')
-    problemWidget.insert(tk.END, functions.imgToString())
-    problemWidget.config(state='disabled')
-    Txt.config(state='normal')
-    Txt.insert(tk.END, functions.request())
-    Txt.config(state='disabled')
+  # Insert text to widgets
+  problemWidget.config(state='normal')
+  problemWidget.insert(tk.END, functions.imgToString())
+  problemWidget.config(state='disabled')
+  Txt.config(state='normal')
+  Txt.insert(tk.END, functions.request())
+  Txt.config(state='disabled')
 
-    # Take Screenshot on key press
-    def screenShot(event):
-      # Find general x,y location for the problem
-      x1 = 340
-      y1 = 350
-      x2 = 1260
-      y2 = 750
-
-      im = ImageGrab.grab(bbox=(int(x1), int(y1), int(x2), int(y2)))
-      im.save('newProblem.png')
-      functions.imgToString()
-      functions.resetAll()
-      printResponse()
-      if debug:
-        print('Screenshot taken')
-
-    window.bind('p', screenShot)
-    window.mainloop()  # Code will run window in a loop
+  window.bind('p', screenShot)
+  window.mainloop()  # Code will run window in a loop
 
 
 # Load the tkinter window
 try:
   functions.imgCheck()
   printResponse()
+  sys.exit(0)
 except Exception as e:
   print(f'Exited - {e}\n')
   if debug:
     print('! Window Terminated !')
+    sys.exit(1)
