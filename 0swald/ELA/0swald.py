@@ -91,7 +91,7 @@ def printResponse():
   Txt.config(font=('Consolas', 12))
   clearall.config(font=('Consolas', 16))
 
-   # Config packs
+  # Config packs
   Heading.pack(ipadx=20,ipady=20,anchor=tk.N,fill=tk.X)
   problemWidget.pack(ipadx=110,ipady=20,anchor=tk.CENTER,expand=True,fill=tk.BOTH)
   Txt.pack(ipadx=125,ipady=20,anchor=tk.CENTER,expand=True,fill=tk.BOTH)
@@ -105,7 +105,7 @@ def printResponse():
   Txt.insert(tk.END, functions.request())
   Txt.config(state='disabled')
 
-  window.bind('p', screenShot)
+  window.bind('p', functions.screenShot)
   window.mainloop()  # Code will run window in a loop
 
 
