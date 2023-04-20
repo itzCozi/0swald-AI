@@ -10,9 +10,10 @@ import pyscreenshot as ImageGrab
 debug = True
 window = tk.Tk()
 openai.api_key = 'YOUR_API_KEY'
+tesseract_path = r'C:\Program Files\Tesseract-OCR\tesseract'
 
 # Path to tesseract on pc
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
+pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
 
 class functions:

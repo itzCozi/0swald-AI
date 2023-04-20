@@ -4,7 +4,7 @@ IXL and delta-math are terrible learning tools so I made this POC to show my uni
 ## Requirments
 - Pytesseract
 - tkinter
-- openAI (API-KEY and package)
+- openAI (API-KEY and pip-package)
 - pyscreenshot
 - PIL
 - requests
@@ -22,6 +22,8 @@ To run the program simply do the following...
 1. download and cd to the code (Where 0swald.py is)
 2. type 'python AI.py' in your terminal
 3. you should see the GUI where you can press 'p' to screenshot
+
+[In-depth Tutorial]()
 
 ### Credit
 Made-by: [itzCozi](https://github.com/itzCozi) | Cooper ransom   
